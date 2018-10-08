@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Extensions for ILogger.</Description>
+    <Copyright>(c) 2018, Pawel Gerr. All rights reserved.</Copyright>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>Pawel Gerr</Authors>
+    <TargetFrameworks>netstandard1.3;netstandard2.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>logging;</PackageTags>
+    <PackageIconUrl>http://thinktecture.com/images/Logo_T_Nontransparent.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/PawelGerr/Thinktecture.Extensions.Logging</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/PawelGerr/Thinktecture.Extensions.Logging/blob/master/LICENCE.md</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/PawelGerr/Thinktecture.Extensions.Logging</RepositoryUrl>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <RootNamespace>Thinktecture</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.2" />
+  </ItemGroup>
+</Project>
